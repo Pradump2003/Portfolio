@@ -6,26 +6,39 @@ import Button from "../Button/Button";
 export default function Home() {
   return (
     <Element name="Home">
-      <div className="grid grid-cols-2 h-screen ">
-        <div className="flex flex-col justify-center gap-4 m-12">
-          <h3 className="text-2xl text-red-500 font-semibold">Hello..</h3>
-          <h1 className="flex text-3xl text-white font-medium leading-relaxed font-castoro">
-            I'm Pradum Prajapati <br />
-            a passionate Full-Stack Developer <br />
-            specializing in building modern and <br />
-            scalable web applications.
-          </h1>
-          <div className="flex flex-row gap-8 mt-12">
-            <a
-              href="public/Pradum.pdf"
-              download="Pradum.pdf"
-              style={{ textDecoration: "none", color: "blue" }}
-            >
-              <Button text="Get My CV" styleType="primary" />
-            </a>
+      <div className="py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+          {/* Left Section */}
+          <div className="flex flex-col justify-center items-center sm:items-start gap-4 p-6 sm:p-12">
+            <h3 className="text-xl sm:text-2xl text-red-500 font-semibold text-center sm:text-start leading-relaxed font-castoro">
+              Hello..
+            </h3>
+            <h1 className="text-lg sm:text-2xl md:text-3xl text-white text-center sm:text-start font-medium leading-relaxed font-castoro">
+              I'm Pradum Prajapati <br />
+              a passionate Full-Stack Developer <br />
+              specializing in building modern and <br />
+              scalable web applications.
+            </h1>
+            <div className="flex flex-row gap-4 sm:gap-8 mt-6 sm:mt-12">
+              <a
+                href="public/Pradum.pdf"
+                download="Pradum.pdf"
+                className="text-blue-500 no-underline"
+              >
+                <Button text="Get My CV" styleType="primary" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div>
+            <img
+              alt="Background"
+              src={bgImage}
+              className="h-72 sm:h-full w-full object-cover"
+            />
           </div>
         </div>
-        <img alt="Background Image" src={bgImage} className="h-screen w-full" />
       </div>
     </Element>
   );

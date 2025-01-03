@@ -22,7 +22,7 @@ export default function Skills() {
         id="skill"
         className="flex flex-col justify-center items-center pt-16"
       >
-        <h1 className=" mb-10 text-white font-castoro font-medium text-5xl">
+        <h1 className=" mb-10 text-white font-castoro font-medium  text-3xl sm:text-5xl">
           {" "}
           My Skills
         </h1>
