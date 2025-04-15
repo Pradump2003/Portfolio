@@ -2,6 +2,7 @@ import React from "react";
 import { Element } from "react-scroll";
 import Redbus from "../../assets/Images/redbus.png";
 import Hotel from "../../assets/Images/hotel.webp";
+import CryptoTrcaker from "../../assets/Images/bitcoin.jpg";
 
 export default function Project() {
   return (
@@ -56,6 +57,51 @@ export default function Project() {
                 JavaScript, React.js, and Firebase for backend integration.
               </li>
             </ul>
+          </div>
+        </div>
+        {/* CryptoTracker */}
+        <div className="mt-10 sm:mt-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl bg-gray-100 border border-black rounded-md p-4 sm:p-6">
+            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
+              <img
+                src={CryptoTrcaker}
+                alt="Project Thumbnail"
+                className="w-48 h-48 sm:w-60 sm:h-60 object-cover rounded-md mb-4 sm:mb-6"
+              />
+              <h2 className="text-lg sm:text-xl font-castoro text-gray-800 text-center">
+                Crypto Tracker <br />
+              </h2>
+            </div>
+            <div className="p-4 sm:p-5 text-black font-castoro">
+              <h1 className="text-lg sm:text-xl">Crypto Tracker</h1>
+              <p className="text-sm sm:text-base font-normal py-3 sm:py-5">
+                A responsive web application that tracks real-time
+                cryptocurrency prices and market trends. The project aims to
+                provide users with a clean, informative interface to explore
+                live data and trends of various digital currencies.
+              </p>
+              <h1 className="text-base sm:text-lg">Key Features:</h1>
+              <ul className="list-disc text-sm sm:text-base font-normal py-3 sm:py-5 pl-4">
+                <li>
+                  <span className="font-bold"> Live Price Updates: </span>
+                  Real-time data fetching using the CoinGecko API
+                </li>
+                <li>
+                  <span className="font-bold">Search and Filter: </span>
+                  Instantly search and sort cryptocurrencies by name, price,
+                  market cap, or 24h volume.
+                </li>
+                <li>
+                  <span className="font-bold">Responsive Design: </span>Fully
+                  responsive layout optimized for both desktop and mobile
+                  screens.
+                </li>
+                <li>
+                  <span className="font-bold">Tech Stack: </span>
+                  React.js, Tailwind CSS, JavaScript, Axios for API integration, CoinGecko API.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         {/* Hotel Management System */}
