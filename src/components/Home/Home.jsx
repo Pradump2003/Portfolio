@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 export default function Home() {
   return (
     <Element name="Home">
-      <div className="py-12">
+      <div className="py-20 sm:py-16 ">
         <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
           {/* Left Section */}
           <div className="flex flex-col justify-center items-center sm:items-start gap-4 p-6 sm:p-12">
@@ -21,7 +21,7 @@ export default function Home() {
             </h1>
             <div className="flex flex-row gap-4 sm:gap-8 mt-6 sm:mt-12">
               <a
-                href="public/Pradum.pdf"
+                href="/Pradum.pdf"
                 download="Pradum.pdf"
                 className="text-blue-500 no-underline"
               >
@@ -31,11 +31,11 @@ export default function Home() {
           </div>
 
           {/* Right Section */}
-          <div>
+          <div className="mt-8 sm:mt-0">
             <img
               alt="Background"
               src={bgImage}
-              className="h-72 sm:h-full w-full object-cover"
+              className="h-72 sm:h-full w-full object-fill"
             />
           </div>
         </div>

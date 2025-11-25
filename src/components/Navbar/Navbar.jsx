@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Element } from "react-scroll";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="fixed top-0 left-0 w-full z-10">
       <div className="navbar bg-neutral">
@@ -89,98 +91,88 @@ export default function Navbar() {
           {/* Hamburger Menu for Mobile */}
           <div className="sm:hidden">
             <button
-              id="menu-toggle"
-              className="text-white focus:outline-none"
-              onClick={() =>
-                document
-                  .getElementById("mobile-menu")
-                  .classList.toggle("hidden")
-              }
+              onClick={() => setIsOpen(!isOpen)}
+              className="btn btn-ghost text-xl"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
+              {isOpen ? "✖" : "☰"}
             </button>
           </div>
         </div>
       </div>
       {/* Mobile Dropdown Menu */}
-      <div
-        id="mobile-menu"
-        className="flex flex-col bg-neutral px-4 py-2 sm:hidden text-sm"
-      >
-        <Link
-          to="Home"
-          smooth={true}
-          duration={500}
-          spy={true}
-          activeClass="text-yellow-400"
-          className="text-white cursor-pointer hover:text-yellow-500 py-2 "
+      {isOpen && (
+        <div
+          id="mobile-menu"
+          className="flex flex-col bg-neutral px-4 py-2 sm:hidden text-sm"
         >
-          Home
-        </Link>
-        <Link
-          to="about-me"
-          smooth={true}
-          duration={500}
-          spy={true}
-          activeClass="text-yellow-400"
-          className="text-white cursor-pointer hover:text-yellow-500 py-2"
-        >
-          About
-        </Link>
-        <Link
-          to="skill"
-          smooth={true}
-          duration={500}
-          spy={true}
-          activeClass="text-yellow-400"
-          className="text-white cursor-pointer hover:text-yellow-500 py-2"
-        >
-          Skills
-        </Link>
-        <Link
-          to="my-project"
-          smooth={true}
-          duration={500}
-          spy={true}
-          activeClass="text-yellow-400"
-          className="text-white cursor-pointer hover:text-yellow-500 py-2"
-        >
-          My Projects
-        </Link>
-        <Link
-          to="education"
-          smooth={true}
-          duration={500}
-          spy={true}
-          activeClass="text-yellow-400"
-          className="text-white cursor-pointer hover:text-yellow-500 py-2"
-        >
-          Education
-        </Link>
-        <Link
-          to="contact-me"
-          smooth={true}
-          duration={500}
-          spy={true}
-          activeClass="text-yellow-400"
-          className="text-white cursor-pointer hover:text-yellow-500 py-2"
-        >
-          Contact
-        </Link>
-      </div>
+          <Link
+            to="Home"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-yellow-400"
+            onClick={() => setIsOpen(false)}
+            className="text-white cursor-pointer hover:text-yellow-500 py-2 "
+          >
+            Home
+          </Link>
+          <Link
+            to="about-me"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-yellow-400"
+            onClick={() => setIsOpen(false)}
+            className="text-white cursor-pointer hover:text-yellow-500 py-2"
+          >
+            About
+          </Link>
+          <Link
+            to="skill"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-yellow-400"
+            onClick={() => setIsOpen(false)}
+            className="text-white cursor-pointer hover:text-yellow-500 py-2"
+          >
+            Skills
+          </Link>
+          <Link
+            to="my-project"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-yellow-400"
+            onClick={() => setIsOpen(false)}
+            className="text-white cursor-pointer hover:text-yellow-500 py-2"
+          >
+            My Projects
+          </Link>
+          <Link
+            to="education"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-yellow-400"
+            onClick={() => setIsOpen(false)}
+            className="text-white cursor-pointer hover:text-yellow-500 py-2"
+          >
+            Education
+          </Link>
+          <Link
+            to="contact-me"
+            smooth={true}
+            duration={500}
+            spy={true}
+            activeClass="text-yellow-400"
+            onClick={() => setIsOpen(false)}
+            className="text-white cursor-pointer hover:text-yellow-500 py-2"
+          >
+            Contact
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

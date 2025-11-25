@@ -7,7 +7,7 @@ import CryptoTrcaker from "../../assets/Images/bitcoin.jpg";
 export default function Project() {
   return (
     <Element name="my-project">
-      <div id="my-project" className="flex flex-col items-center pt-8 sm:pt-16">
+      <div id="my-project" className="flex flex-col items-center pt-20 ">
         <h1 className="mb-10 sm:mb-14 text-white font-castoro font-medium text-3xl sm:text-5xl">
           My Projects
         </h1>

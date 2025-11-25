@@ -4,9 +4,9 @@ import { Element } from "react-scroll";
 export default function About() {
   return (
     <Element name="about-me">
-      <div className="flex flex-col items-center pt-16 sm:pt-14">
-        <div id="about-me" className="px-4 sm:px-12 pt-8 sm:pt-12">
-          <h1 className="mt-16 sm:mt-0 mb-8 sm:mb-12 text-white font-castoro font-medium text-3xl sm:text-5xl text-center sm:text-left">
+      <div className="flex flex-col items-center pt-20">
+        <div id="about-me" className="px-4 sm:px-12">
+          <h1 className="mt-16 sm:mt-0 mb-8 sm:mb-12 text-white font-castoro font-medium text-3xl sm:text-5xl text-center sm:text-center">
             About Me
           </h1>
           <p className="text-base sm:text-xl font-castoro leading-relaxed font-normal text-center sm:text-left">

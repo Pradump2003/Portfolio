@@ -20,7 +20,7 @@ export default function Skills() {
     <Element name="skill">
       <div
         id="skill"
-        className="flex flex-col justify-center items-center pt-16"
+        className="flex flex-col justify-center items-center pt-20 "
       >
         <h1 className=" mb-10 text-white font-castoro font-medium  text-3xl sm:text-5xl">
           {" "}

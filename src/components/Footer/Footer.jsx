@@ -1,9 +1,8 @@
-import React from "react";
 import X from "../../assets/Images/x.jpg";
 
 export default function Footer() {
   return (
-    <footer className="footer bg-neutral text-neutral-content items-center p-4">
+    <footer className="footer bg-neutral text-neutral-content flex flex-col md:flex-row md:justify-between items-center p-4">
       <aside className="grid-flow-col items-center">
         <svg
           width="36"
@@ -18,7 +17,7 @@ export default function Footer() {
         </svg>
         <p>© {new Date().getFullYear()} Pradum Prajapati - All right reserved</p>
       </aside>
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <nav className="grid grid-flow-col gap-4 justify-center md:place-self-center md:justify-self-end">
         <a href="https://x.com/pradump2003" target="_blank" rel="noreferrer">
           <img src={X} alt="X" className="h-[24px] w-[24px]" />
         </a>
