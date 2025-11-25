@@ -32,7 +32,7 @@ export default function Contact() {
     <Element name="contact">
       <div
         id="contact-me"
-        className="flex flex-col items-center px-8 sm:px-16 py-16"
+        className="flex flex-col items-center px-8 sm:px-16 py-20"
       >
         <h1 className="text-white font-castoro font-medium text-3xl sm:text-5xl">
           Contact <span className="text-yellow-500">Me</span>
