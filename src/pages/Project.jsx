@@ -1,8 +1,7 @@
-import React from "react";
 import { Element } from "react-scroll";
-import Redbus from "../../assets/Images/redbus.png";
-import Hotel from "../../assets/Images/hotel.webp";
-import CryptoTrcaker from "../../assets/Images/bitcoin.jpg";
+import RedBus from "../assets/Images/redbus.png";
+import Hotel from "../assets/Images/hotel.webp";
+import CryptoTrcaker from "../assets/Images/bitcoin.jpg";
 
 export default function Project() {
   return (
@@ -15,7 +14,7 @@ export default function Project() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl bg-gray-100 border border-black rounded-md p-4 sm:p-6">
           <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
             <img
-              src={Redbus}
+              src={RedBus}
               alt="Project Thumbnail"
               className="w-48 h-48 sm:w-60 sm:h-60 object-cover rounded-md mb-4 sm:mb-6"
             />

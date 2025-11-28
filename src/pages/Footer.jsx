@@ -1,4 +1,4 @@
-import X from "../../assets/Images/x.jpg";
+import X from "../assets/Images/x.jpg";
 
 export default function Footer() {
   return (

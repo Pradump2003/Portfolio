@@ -1,7 +1,6 @@
-import bgImage from "../../assets/Images/bgimage.jpeg";
-import pradum from "../../assets/Images/Pradum.jpeg";
+import bgImage from "../assets/Images/bgimage.jpeg";
 import { Element } from "react-scroll";
-import Button from "../Button/Button";
+import Button from "../components/Button/Button";
 
 export default function Home() {
   return (

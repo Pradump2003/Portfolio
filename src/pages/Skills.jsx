@@ -1,18 +1,17 @@
-import React from "react";
-import jslogo from "../../assets/Images/JavaScript-logo.png";
-import python from "../../assets/Images/Python.png";
-import C from "../../assets/Images/C.png";
-import Cpp from "../../assets/Images/Cpp.png";
-import html from "../../assets/Images/html.png";
-import css from "../../assets/Images/css.png";
-import bootstrap from "../../assets/Images/bootstrap.jpeg";
-import tailwind from "../../assets/Images/tailwing.jpeg";
-import react from "../../assets/Images/react.jpeg";
-import redux from "../../assets/Images/redux.jpeg";
-import nodeJS from "../../assets/Images/nodejs.png";
-import express from "../../assets/Images/expressjs.webp";
-import mongoDB from "../../assets/Images/MongoDB1.jpg";
-import mysql from "../../assets/Images/mysql.png";
+import jslogo from "../assets/Images/JavaScript-logo.png";
+import python from "../assets/Images/Python.png";
+import C from "../assets/Images/C.png";
+import Cpp from "../assets/Images/Cpp.png";
+import html from "../assets/Images/html.png";
+import css from "../assets/Images/css.png";
+import bootstrap from "../assets/Images/bootstrap.jpeg";
+import tailwind from "../assets/Images/tailwing.jpeg";
+import react from "../assets/Images/react.jpeg";
+import redux from "../assets/Images/redux.jpeg";
+import nodeJS from "../assets/Images/nodejs.png";
+import express from "../assets/Images/expressjs.webp";
+import mongoDB from "../assets/Images/MongoDB1.jpg";
+import mysql from "../assets/Images/mysql.png";
 import { Element } from "react-scroll";
 
 export default function Skills() {
