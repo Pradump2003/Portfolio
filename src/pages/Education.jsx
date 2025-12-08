@@ -3,10 +3,15 @@ import { Element } from "react-scroll";
 export default function Education() {
   return (
     <Element name="education">
-      <div id="education" className="flex flex-col items-center pt-20">
-        <h1 className="text-white font-castoro font-medium text-3xl sm:text-5xl">
+      <div id="education" className="flex flex-col items-center pt-2 sm:pt-20">
+        <h1
+          className="mt-16 sm:mt-0 mb-2 sm:mb-12 font-castoro font-medium 
+               text-3xl sm:text-5xl text-center
+               text-black dark:text-white"
+        >
           Education
         </h1>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-20 mt-8 sm:mt-14 px-4 sm:px-14 w-full max-w-5xl text-center sm:text-left">
           {/* Left Column */}
           <div className="flex flex-col gap-10">

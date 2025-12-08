@@ -6,12 +6,26 @@ import CryptoTrcaker from "../assets/Images/bitcoin.jpg";
 export default function Project() {
   return (
     <Element name="my-project">
-      <div id="my-project" className="flex flex-col items-center pt-20 ">
-        <h1 className="mb-10 sm:mb-14 text-white font-castoro font-medium text-3xl sm:text-5xl">
+      <div
+        id="my-project"
+        className="flex flex-col items-center pt-16 sm:pt-20 px-6 sm:px-10 lg:px-0"
+      >
+        <h1
+          className=" mb-14 sm:mb-12 font-castoro font-medium 
+               text-3xl sm:text-5xl text-center
+               text-black dark:text-white"
+        >
           My Projects
         </h1>
+
         {/* Red Bus Clone */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl bg-gray-100 border border-black rounded-md p-4 sm:p-6">
+        <div
+          className="
+                grid grid-cols-1 sm:grid-cols-2 gap-4 
+                w-full max-w-4xl 
+                bg-gray-100 border border-black rounded-md 
+                p-4 sm:p-6"
+        >
           <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
             <img
               src={RedBus}
@@ -97,7 +111,8 @@ export default function Project() {
                 </li>
                 <li>
                   <span className="font-bold">Tech Stack: </span>
-                  React.js, Tailwind CSS, JavaScript, Axios for API integration, CoinGecko API.
+                  React.js, Tailwind CSS, JavaScript, Axios for API integration,
+                  CoinGecko API.
                 </li>
               </ul>
             </div>

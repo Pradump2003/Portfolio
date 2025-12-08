@@ -19,12 +19,16 @@ export default function Skills() {
     <Element name="skill">
       <div
         id="skill"
-        className="flex flex-col justify-center items-center pt-20 "
+        className="flex flex-col justify-center items-center pt-6 sm:pt-20 mx-8 sm:mx-10 "
       >
-        <h1 className=" mb-10 text-white font-castoro font-medium  text-3xl sm:text-5xl">
-          {" "}
+        <h1
+          className="mt-16 sm:mt-0 mb-8 sm:mb-12 font-castoro font-medium 
+               text-3xl sm:text-5xl text-center
+               text-black dark:text-white"
+        >
           My Skills
         </h1>
+
         <h1 className="mb-10 text-white font-castoro font-normal text-2xl">
           {" "}
           Languages
