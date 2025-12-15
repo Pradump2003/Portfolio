@@ -1,3 +1,4 @@
+import { FaGithub, FaGlobe, FaExternalLinkAlt } from "react-icons/fa";
 import { Element } from "react-scroll";
 import RedBus from "../assets/Images/redbus.png";
 import Hotel from "../assets/Images/hotel.webp";
@@ -8,10 +9,10 @@ export default function Project() {
     <Element name="my-project">
       <div
         id="my-project"
-        className="flex flex-col items-center pt-16 sm:pt-20 px-6 sm:px-10 lg:px-0"
+        className="flex flex-col items-center pt-14 sm:pt-20 px-6 sm:px-10 lg:px-0"
       >
         <h1
-          className=" mb-14 sm:mb-12 font-castoro font-medium 
+          className=" mb-10 sm:mb-12 font-castoro font-medium 
                text-3xl sm:text-5xl text-center
                text-black dark:text-white"
         >
@@ -70,6 +71,26 @@ export default function Project() {
                 JavaScript, React.js, and Firebase for backend integration.
               </li>
             </ul>
+            <div className="relative group text-center">
+              <a
+                href="https://github.com/Pradump2003/Crypto-hunter.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-black hover:scale-110 transition"
+              >
+                <FaGithub size={26} />
+              </a>
+
+              {/* Tooltip */}
+              <span
+                className="absolute -top-9 left-1/2 -translate-x-1/2
+                 scale-0 group-hover:scale-100
+                 bg-black text-white text-xs px-2 py-1 rounded
+                 transition whitespace-nowrap"
+              >
+                GitHub
+              </span>
+            </div>
           </div>
         </div>
         {/* CryptoTracker */}
@@ -115,6 +136,50 @@ export default function Project() {
                   CoinGecko API.
                 </li>
               </ul>
+              <div className="flex gap-6 justify-center">
+                {/* GitHub */}
+                <div className="relative group">
+                  <a
+                    href="https://github.com/Pradump2003/Crypto-hunter.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-black hover:scale-110 transition"
+                  >
+                    <FaGithub size={26} />
+                  </a>
+
+                  {/* Tooltip */}
+                  <span
+                    className="absolute -top-9 left-1/2 -translate-x-1/2
+                 scale-0 group-hover:scale-100
+                 bg-black text-white text-xs px-2 py-1 rounded
+                 transition whitespace-nowrap"
+                  >
+                    GitHub
+                  </span>
+                </div>
+
+                {/* Live Link */}
+                <div className="relative group">
+                  <a
+                    href="https://crypto-hunter-ks5y.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-black hover:scale-110 transition"
+                  >
+                    <FaExternalLinkAlt size={22} />
+                  </a>
+
+                  <span
+                    className="absolute -top-9 left-1/2 -translate-x-1/2
+                 scale-0 group-hover:scale-100
+                 bg-black text-white text-xs px-2 py-1 rounded
+                 transition whitespace-nowrap"
+                  >
+                    Live Demo
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

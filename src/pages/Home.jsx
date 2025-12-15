@@ -41,7 +41,7 @@ export default function Home() {
             <p
               className="text-sm sm:text-base md:text-xl 
                       leading-relaxed max-w-sm sm:max-w-md md:max-w-lg
-                      text-center md:text-left text-gray-300"
+                      text-center md:text-left text-black dark:text-white"
             >
               A passionate Full-Stack Developer skilled in building modern,
               scalable, and high-performance web applications using MERN Stack.

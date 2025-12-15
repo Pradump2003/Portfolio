@@ -50,7 +50,10 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
             {/* Dark Mode Toggle */}
             <li>
-              <button onClick={toggleDarkMode} className="text-2xl hover:scale-110 transition-transform">
+              <button
+                onClick={toggleDarkMode}
+                className="text-2xl hover:scale-110 transition-transform"
+              >
                 {darkMode ? "🌙" : "🌞"}
               </button>
             </li>
@@ -70,7 +73,18 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="sm:hidden bg-neutral dark:bg-black flex flex-col px-6 py-4 text-sm font-castoro space-y-2 transition-all duration-300">
+        <div
+          className="
+      sm:hidden
+      absolute top-full left-0 w-full
+      bg-white dark:bg-black
+      border-t border-gray-200 dark:border-gray-800
+      shadow-lg
+      px-6 py-5
+      space-y-3
+      animate-slideDown
+    "
+        >
           {[
             { to: "Home", label: "Home" },
             { to: "about-me", label: "About" },
@@ -88,18 +102,38 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
               offset={-70}
               onClick={() => setIsOpen(false)}
               activeClass="text-yellow-400"
-              className="cursor-pointer hover:text-yellow-500 py-2 transition-colors"
+              className="
+          block
+          text-base font-medium font-castoro
+          text-gray-800 dark:text-gray-200
+          px-3 py-2 rounded-md
+          hover:bg-yellow-400 hover:text-black
+          transition-all duration-300
+        "
             >
               {item.label}
             </Link>
           ))}
 
+          {/* Divider */}
+          <div className="h-px bg-gray-300 dark:bg-gray-700 my-2" />
+
           {/* Dark Mode Toggle */}
-          <div className="flex justify-start py-2">
-            <button onClick={toggleDarkMode} className="text-2xl hover:scale-110 transition-transform">
-              {darkMode ? "🌙" : "🌞"}
-            </button>
-          </div>
+          <button
+            onClick={() => {
+              toggleDarkMode(); // 🌗 theme change
+              setIsOpen(false); // ❌ close dropdown
+            }}
+            className="
+        flex items-center gap-3
+        text-gray-800 dark:text-gray-200
+        px-3 py-2 rounded-md
+        hover:bg-gray-200 dark:hover:bg-gray-800
+        transition-all duration-300
+      "
+          >
+            <span className="text-xl">{darkMode ? "🌞" : "🌙"}</span>
+          </button>
         </div>
       )}
     </div>

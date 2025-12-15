@@ -23,9 +23,7 @@ export default function Education() {
               <h3 className="text-base sm:text-lg font-medium">
                 Hi-Tech Institute of Engineering & Technology, Ghaziabad
               </h3>
-              <p className="text-sm sm:text-base font-normal">
-                <span className="font-bold">CGPA:</span> 6.9/10
-              </p>
+              <p className="text-sm sm:text-base font-normal">CGPA: 6.9/10</p>
               <p className="text-xs sm:text-sm font-extralight">
                 October 2020 - August 2024
               </p>
@@ -39,7 +37,7 @@ export default function Education() {
                 Patel Memorial Inter College, Atraulia, Azamgarh
               </h3>
               <p className="text-sm sm:text-base font-normal">
-                <span className="font-bold">Percentage:</span> 81%
+                Percentage: 81%
               </p>
               <p className="text-xs sm:text-sm font-extralight">June 2017</p>
             </div>
@@ -55,7 +53,7 @@ export default function Education() {
                 Patel Memorial Inter College, Atraulia, Azamgarh
               </h3>
               <p className="text-sm sm:text-base font-normal">
-                <span className="font-bold">Percentage:</span> 71%
+                Percentage: 71%
               </p>
               <p className="text-xs sm:text-sm font-extralight">April 2019</p>
             </div>

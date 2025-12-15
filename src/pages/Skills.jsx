@@ -19,7 +19,7 @@ export default function Skills() {
     <Element name="skill">
       <div
         id="skill"
-        className="flex flex-col justify-center items-center pt-6 sm:pt-20 mx-8 sm:mx-10 "
+        className="flex flex-col justify-center items-center sm:pt-20 mx-8 sm:mx-10 "
       >
         <h1
           className="mt-16 sm:mt-0 mb-8 sm:mb-12 font-castoro font-medium 
@@ -29,49 +29,69 @@ export default function Skills() {
           My Skills
         </h1>
 
-        <h1 className="mb-10 text-white font-castoro font-normal text-2xl">
+        <h1 className="mb-10 font-castoro font-normal text-2xl  text-black dark:text-white">
           {" "}
           Languages
         </h1>
         <ul className="flex flex-wrap justify-center gap-3 text-base font-castoro font-normal">
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="Js Image" src={jslogo} className="h-[80px] w-[80px]" />
+            <img
+              alt="Js Image"
+              src={jslogo}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> JavaScript</span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
             <img
               alt="Python Image"
               src={python}
-              className="h-[80px] w-[80px]"
+              className=" h-[50px]  w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> Python </span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="C Image" src={C} className="h-[80px] w-[80px]" />
+            <img
+              alt="C Image"
+              src={C}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> C </span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="C++ Image" src={Cpp} className="h-[80px] w-[80px]" />
+            <img
+              alt="C++ Image"
+              src={Cpp}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> C++ </span>
           </li>
         </ul>
-        <h1 className="m-10 text-white font-castoro font-normal text-2xl">
+        <h1 className="m-10  text-black dark:text-white font-castoro font-normal text-2xl">
           Frontend
         </h1>
         <ul className="flex flex-wrap justify-center gap-3 text-base font-castoro font-normal">
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="HTML Image" src={html} className="h-[80px] w-[80px]" />
+            <img
+              alt="HTML Image"
+              src={html}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> HTML5</span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="CSS Image" src={css} className="h-[80px] w-[80px]" />
+            <img
+              alt="CSS Image"
+              src={css}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> CSS </span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
             <img
               alt="Bootstrap Image"
               src={bootstrap}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> Bootstrap </span>
           </li>
@@ -79,19 +99,23 @@ export default function Skills() {
             <img
               alt="Tailwind Image"
               src={tailwind}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> Tailwind CSS </span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="Js Image" src={jslogo} className="h-[80px] w-[80px]" />
+            <img
+              alt="Js Image"
+              src={jslogo}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> JavaScript</span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
             <img
               alt="Tailwind Image"
               src={react}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> ReactJS </span>
           </li>
@@ -99,12 +123,12 @@ export default function Skills() {
             <img
               alt="Tailwind Image"
               src={redux}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> Redux </span>
           </li>
         </ul>
-        <h1 className="m-10 text-white font-castoro font-normal text-2xl">
+        <h1 className="m-10 text-black dark:text-white font-castoro font-normal text-2xl">
           Backend
         </h1>
         <ul className="flex flex-wrap justify-center gap-3 text-base font-castoro font-normal">
@@ -112,7 +136,7 @@ export default function Skills() {
             <img
               alt="NodeJS Image"
               src={nodeJS}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> NodeJS </span>
           </li>
@@ -120,7 +144,7 @@ export default function Skills() {
             <img
               alt="Express.js Image"
               src={express}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> ExpressJS </span>
           </li>
@@ -128,12 +152,16 @@ export default function Skills() {
             <img
               alt="MongoDB Image"
               src={mongoDB}
-              className="h-[80px] w-[80px]"
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
             />
             <span> MongoDB </span>
           </li>
           <li className=" flex flex-col items-center px-4 py-3 gap-2 group hover:scale-110 transition-transform duration-300">
-            <img alt="MySQL Image" src={mysql} className="h-[80px] w-[80px]" />
+            <img
+              alt="MySQL Image"
+              src={mysql}
+              className="h-[50px] w-[50px] md:h-[80px] md:w-[80px]"
+            />
             <span> MySQL </span>
           </li>
         </ul>
