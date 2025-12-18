@@ -1,4 +1,12 @@
-import bgImage from "../assets/Images/bgimage.jpeg";
+import bgImage from "../assets/Images/portfolioImage.png";
+import leetcodeLogo from "../assets/Images/leetcode.png";
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+  FaTwitter,
+  FaFacebookF,
+} from "react-icons/fa";
 import { Element, Link } from "react-scroll";
 import Button from "../components/Button/Button";
 import { motion } from "framer-motion";
@@ -7,8 +15,8 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     <Element name="Home">
-      <div className="min-h-screen flex items-center py-10 md:pt-20 px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full md:pl-10 sm:px-10 lg:pl-24">
+      <div className="min-h-screen flex items-center pt-24 pb-6 md:pt-20 px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full md:pl-10 sm:px-10 lg:pl-24">
           {/* LEFT SECTION */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -49,6 +57,66 @@ export default function Home() {
               experience.
             </p>
 
+            <div className="flex flex-wrap justify-center md:justify-center lg:justify-start gap-3 md:gap-6 lg:gap-5 mt-6">
+              <a
+                href="https://www.linkedin.com/in/pradum-prajapati-73564b217"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon bg-[#0A66C2]"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://github.com/Pradump2003"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon bg-gray-900 dark:bg-white text-white dark:text-black"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://leetcode.com/u/Pradum_2003/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon bg-gray-500 dark:bg-white"
+              >
+                <img
+                  src={leetcodeLogo}
+                  alt="LeetCode"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-9 md:h-9 object-contain"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/_pradum__prajapati"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="https://x.com/pradump2003"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon bg-black"
+              >
+                <FaTwitter />
+              </a>
+
+              <a
+                href="https://www.facebook.com/pradum.prajapati.9421"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon bg-[#1877F2]"
+              >
+                <FaFacebookF />
+              </a>
+            </div>
+
             {/* Buttons — wrap on small screens */}
             <div
               className="flex flex-wrap justify-center md:justify-start 
@@ -75,10 +143,7 @@ export default function Home() {
             <img
               src={bgImage}
               alt="Profile"
-              className="rounded-2xl shadow-xl 
-                     w-64 sm:w-80 md:w-full 
-                     h-64 sm:h-[520px] lg:h-96 object-cover 
-                     transition duration-500 group-hover:scale-[1.03]"
+              className="w-64 sm:w-64 md:w-full h-64 sm:h-[350px] lg:h-[450px] object-cover transition duration-500 group-hover:scale-[1.03]"
             />
           </motion.div>
         </div>
