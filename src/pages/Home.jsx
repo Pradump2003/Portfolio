@@ -49,7 +49,7 @@ export default function Home() {
             <p
               className="text-sm sm:text-base md:text-xl 
                       leading-relaxed max-w-sm sm:max-w-md md:max-w-lg
-                      text-center md:text-left text-black dark:text-white"
+                      text-center md:text-left"
             >
               A passionate Full-Stack Developer skilled in building modern,
               scalable, and high-performance web applications using MERN Stack.
@@ -102,7 +102,7 @@ export default function Home() {
                 href="https://x.com/pradump2003"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon bg-black"
+                className="social-icon bg-gray-500"
               >
                 <FaTwitter />
               </a>

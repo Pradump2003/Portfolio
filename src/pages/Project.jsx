@@ -1,33 +1,57 @@
-import { FaGithub, FaGlobe, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { Element } from "react-scroll";
 import RedBus from "../assets/Images/redbus.png";
 import Hotel from "../assets/Images/hotel.webp";
 import CryptoTrcaker from "../assets/Images/bitcoin.jpg";
 
 export default function Project() {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <Element name="my-project">
-      <div
+      <motion.div
         id="my-project"
         className="flex flex-col items-center pt-14 sm:pt-20 px-6 sm:px-10 lg:px-0"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       >
-        <h1
-          className=" mb-10 sm:mb-12 font-castoro font-medium 
-               text-3xl sm:text-5xl text-center
-               text-black dark:text-white"
-        >
+        <motion.h1
+          variants={item}
+          className=" mb-10 sm:mb-12 font-castoro font-medium text-3xl sm:text-5xl text-center">
           My Projects
-        </h1>
+        </motion.h1>
 
         {/* Red Bus Clone */}
-        <div
+        <motion.div
+          variants={item}
           className="
                 grid grid-cols-1 sm:grid-cols-2 gap-4 
                 w-full max-w-4xl 
                 bg-gray-100 border border-black rounded-md 
                 p-4 sm:p-6"
         >
-          <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+          >
             <img
               src={RedBus}
               alt="Project Thumbnail"
@@ -39,7 +63,8 @@ export default function Project() {
             <h2 className="text-lg sm:text-xl font-castoro text-gray-800 text-center">
               (Red Bus Clone)
             </h2>
-          </div>
+          </motion.div>
+
           <div className="p-4 sm:p-5 text-black font-castoro">
             <h1 className="text-lg sm:text-xl">Red Bus Clone</h1>
             <p className="text-sm sm:text-base font-normal py-3 sm:py-5">
@@ -80,23 +105,26 @@ export default function Project() {
               >
                 <FaGithub size={26} />
               </a>
-
-              {/* Tooltip */}
               <span
                 className="absolute -top-9 left-1/2 -translate-x-1/2
-                 scale-0 group-hover:scale-100
-                 bg-black text-white text-xs px-2 py-1 rounded
-                 transition whitespace-nowrap"
+                       scale-0 group-hover:scale-100
+                       bg-black text-white text-xs px-2 py-1 rounded
+                       transition whitespace-nowrap"
               >
                 GitHub
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Crypto Tracker */}
         {/* CryptoTracker */}
-        <div className="mt-10 sm:mt-14">
+        <motion.div variants={item} className="mt-10 sm:mt-14">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl bg-gray-100 border border-black rounded-md p-4 sm:p-6">
-            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+            >
               <img
                 src={CryptoTrcaker}
                 alt="Project Thumbnail"
@@ -105,7 +133,8 @@ export default function Project() {
               <h2 className="text-lg sm:text-xl font-castoro text-gray-800 text-center">
                 Crypto Tracker <br />
               </h2>
-            </div>
+            </motion.div>
+
             <div className="p-4 sm:p-5 text-black font-castoro">
               <h1 className="text-lg sm:text-xl">Crypto Tracker</h1>
               <p className="text-sm sm:text-base font-normal py-3 sm:py-5">
@@ -114,6 +143,7 @@ export default function Project() {
                 provide users with a clean, informative interface to explore
                 live data and trends of various digital currencies.
               </p>
+
               <h1 className="text-base sm:text-lg">Key Features:</h1>
               <ul className="list-disc text-sm sm:text-base font-normal py-3 sm:py-5 pl-4">
                 <li>
@@ -126,16 +156,17 @@ export default function Project() {
                   market cap, or 24h volume.
                 </li>
                 <li>
-                  <span className="font-bold">Responsive Design: </span>Fully
-                  responsive layout optimized for both desktop and mobile
+                  <span className="font-bold">Responsive Design: </span>
+                  Fully responsive layout optimized for both desktop and mobile
                   screens.
                 </li>
                 <li>
                   <span className="font-bold">Tech Stack: </span>
-                  React.js, Tailwind CSS, JavaScript, Axios for API integration,
-                  CoinGecko API.
+                  React.js, Tailwind CSS, JavaScript, Axios, CoinGecko API.
                 </li>
               </ul>
+
+              {/* GitHub + Live Links */}
               <div className="flex gap-6 justify-center">
                 {/* GitHub */}
                 <div className="relative group">
@@ -147,19 +178,17 @@ export default function Project() {
                   >
                     <FaGithub size={26} />
                   </a>
-
-                  {/* Tooltip */}
                   <span
                     className="absolute -top-9 left-1/2 -translate-x-1/2
-                 scale-0 group-hover:scale-100
-                 bg-black text-white text-xs px-2 py-1 rounded
-                 transition whitespace-nowrap"
+                       scale-0 group-hover:scale-100
+                       bg-black text-white text-xs px-2 py-1 rounded
+                       transition whitespace-nowrap"
                   >
                     GitHub
                   </span>
                 </div>
 
-                {/* Live Link */}
+                {/* Live Demo */}
                 <div className="relative group">
                   <a
                     href="https://crypto-hunter-ks5y.vercel.app/"
@@ -169,12 +198,11 @@ export default function Project() {
                   >
                     <FaExternalLinkAlt size={22} />
                   </a>
-
                   <span
                     className="absolute -top-9 left-1/2 -translate-x-1/2
-                 scale-0 group-hover:scale-100
-                 bg-black text-white text-xs px-2 py-1 rounded
-                 transition whitespace-nowrap"
+                       scale-0 group-hover:scale-100
+                       bg-black text-white text-xs px-2 py-1 rounded
+                       transition whitespace-nowrap"
                   >
                     Live Demo
                   </span>
@@ -182,11 +210,15 @@ export default function Project() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
+
         {/* Hotel Management System */}
-        <div className="mt-10 sm:mt-14">
+        <motion.div variants={item} className="mt-10 sm:mt-14">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-4xl bg-gray-100 border border-black rounded-md p-4 sm:p-6">
-            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-6 hover:scale-105 transition-transform duration-300"
+            >
               <img
                 src={Hotel}
                 alt="Project Thumbnail"
@@ -195,16 +227,14 @@ export default function Project() {
               <h2 className="text-lg sm:text-xl font-castoro text-gray-800 text-center">
                 Hotel Management System
               </h2>
-            </div>
+            </motion.div>
+
             <div className="p-4 sm:p-5 text-black font-castoro">
               <h1 className="text-lg sm:text-xl">Hotel Management System</h1>
               <p className="text-sm sm:text-base font-normal py-3 sm:py-5">
                 Developed a basic Hotel Management System using C++ to manage
                 essential hotel operations, including room reservations, guest
-                details, billing, and service records. The project successfully
-                demonstrated the practical application of C++ for a real-world
-                scenario, improving coding skills and understanding of OOP
-                concepts.
+                details, billing, and service records.
               </p>
               <h1 className="text-base sm:text-lg">Technologies Used:</h1>
               <ul className="list-disc text-sm sm:text-base font-normal py-3 pl-4">
@@ -225,8 +255,8 @@ export default function Project() {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </Element>
   );
 }
